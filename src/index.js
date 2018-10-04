@@ -4,4 +4,22 @@
  */
 module.exports = function getLoveTrianglesCount(preferences = []) {
   // your implementation
+
+let count = 0;
+
+
+    for (let i=0, len = preferences.length; i <= preferences.length; i++){
+    const firstPos = preferences[i];
+    const secondPos = preferences[firstPos - 1];
+    const thirdPos = preferences[secondPos -1];
+
+    const conditionOne = thirdPos === i + 1;
+    const conditionTwo = firstPos != i + 1;
+
+    if(conditionOne && conditionTwo){
+        count++;
+         }
+    }
+
+return count/3;
 };
